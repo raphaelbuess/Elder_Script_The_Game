@@ -1,65 +1,79 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  /* Ensures your gradient covers the whole viewport minimum */
-  min-height: 100vh; 
+margin: 0;
+padding: 0;
+min-height: 100vh;
+background-color: #17072B; /* Fallback color */
 }
 
 /* Main Canvas (Your Desktop - Frame) */
 .main-canvas {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
-  
-  /* Web optimization: Changed fixed 1440px to 100% width for responsiveness */
-  width: 100%;
-  min-height: 100vh;
-  
-  background: linear-gradient(180deg, #17072B 14.74%, #C381E4 100%);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+/* Web optimization: Changed fixed 1440px to 100% width for responsiveness */
+width: 100%;
+min-height: 100vh;
+background: linear-gradient(180deg, #17072B 14.74%, #C381E4 100%);
 }
 
 /* Header Wrapper (Your Frame 1) */
 .header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
-
-  width: 100%;
-  height: 124px;
-  
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+width: 100%;
+height: 1.2;
 }
 
 /* Title Text */
 .main-title {
-  width: 100%;
-  height: auto; 
+width: 100%;
+height: auto;
+font-family: 'Almendra', 'Georgia', serif;
+font-weight: 400;
+font-size: clamp(20px, 6.5vw, 124px);
+line-height: 1.2;
+text-align: center;
+color: #C381E4;
+}
 
-  font-family: 'Almendra', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 96px;
-  line-height: 124px;
-  text-align: center;
+/* Navbar */
 
-  color: #C381E4;
+.navbar {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 0px 50px;
+gap: 50px;
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+width: 100%;
+height: 124px;
+}
+
+.nav-item {
+font-family: 'Almendra', serif;
+font-size: 20px;
+color: #000000;
+text-decoration: none; /* Removes the default ugly browser underline */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px 10px;
+
+width: 10vw;
+height: 72px;
+
+background: #C381E4;
+border-radius: 20px;
 }
